@@ -2,12 +2,23 @@ var through = require("through2"),
 	gutil = require("gulp-util"),
     _    = require('lodash');
 
+/**
+ * module.exports
+ * @param {object} param http://nevir.github.io/groc/cli.html#cli-options
+ * @returns {*}
+ */
 module.exports = function (param) {
 	"use strict";
 
-	// see "Writing a plugin"
-	// https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/README.md
+    /**
+     * groc
+     * @param file
+     * @param enc
+     * @param callback
+     * @returns {*}
+     */
 	function groc(file, enc, callback) {
+
 		/*jshint validthis:true*/
 
 		// Do nothing if no contents
