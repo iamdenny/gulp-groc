@@ -10,6 +10,8 @@ var through = require("through2"),
 module.exports = function (param) {
 	"use strict";
 
+    var filesToGroc = [];
+
     /**
      * groc
      * @param file
@@ -35,27 +37,21 @@ module.exports = function (param) {
 
 		// check if file.contents is a `Buffer`
 		if (file.isBuffer()) {
-            var groc = require('groc').CLI;
-            groc(mergeArgs(file.path, param), function(err) {
-                if(err) {
-                    this.emit('error', new gutil.PluginError('gulp-<%= pluginName %>', err));
-                }
-                this.push(file);
-                callback();
-            }.bind(this));
-
+            filesToGroc.push(file.path);
+            this.push(file);
+            callback();
 		}
 
 	}
 
     /**
      * merge Args
-     * @param filePath
+     * @param files
      * @param parameter
      * @returns {*}
      */
-    function mergeArgs (filePath, parameter) {
-        return _.flatten([filePath].concat(parseOption(parameter)));
+    function mergeArgs (files, parameter) {
+        return _.flatten(files.concat(parseOption(parameter)));
     }
 
     /**
@@ -81,5 +77,20 @@ module.exports = function (param) {
         return args;
     }
 
-	return through.obj(groc);
+    /**
+     * end stream
+     */
+    function endStream () {
+        if (filesToGroc) {
+            var groc = require('groc').CLI;
+            groc(mergeArgs(filesToGroc, param), function(err) {
+                if(err) {
+                    this.emit('error', new gutil.PluginError('gulp-<%= pluginName %>', err));
+                }
+            }.bind(this));
+        }
+        this.emit('end');
+    }
+
+	return through.obj(groc, endStream);
 };
