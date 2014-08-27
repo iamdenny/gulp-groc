@@ -34,9 +34,6 @@ gulp.task('doc', [ 'cleanDoc' ], function () {
         .src("./src/scripts/**/*.js")
         .pipe(groc({
             out: 'jsdoc'
-        }))
-        .pipe(notify({
-            message: 'groc task complte'
         }));
 });
 ```
