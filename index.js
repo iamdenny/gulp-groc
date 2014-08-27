@@ -87,9 +87,10 @@ module.exports = function (param) {
                 if(err) {
                     this.emit('error', new gutil.PluginError('gulp-<%= pluginName %>', err));
                 }
+                this.emit('end');
             }.bind(this));
         }
-        this.emit('end');
+
     }
 
 	return through.obj(groc, endStream);
