@@ -89,6 +89,8 @@ module.exports = function (param) {
                 }
                 this.emit('end');
             }.bind(this));
+        } else {
+            this.emit('end');
         }
 
     }
