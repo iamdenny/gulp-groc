@@ -28,6 +28,7 @@ gulp.task('cleanDoc', function () {
         .pipe(clean());
 });
 
+// gulp-groc
 gulp.task('doc', [ 'cleanDoc' ], function () {
     return gulp
         .src("./src/scripts/**/*.js")
@@ -55,6 +56,8 @@ groc, if you are interested.
 ## License
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
+
+Copyright (c) 2014 NAVER Corp.
 
 [npm-url]: https://npmjs.org/package/gulp-groc
 [npm-image]: https://badge.fury.io/js/gulp-groc.png
