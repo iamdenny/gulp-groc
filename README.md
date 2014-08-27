@@ -1,6 +1,6 @@
 # gulp-groc
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]  [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency Status][depstat-image]][depstat-url]
-[![Livereload downloads](http://img.shields.io/npm/dm/gulp-livereload-for-was.svg?style=flat)](https://www.npmjs.org/package/gulp-livereload-for-was) [![MIT Licensed](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](#license)
+[![Livereload downloads](http://img.shields.io/npm/dm/gulp-groc.svg?style=flat)](https://www.npmjs.org/package/gulp-groc) [![MIT Licensed](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](#license)
 
 > groc plugin for [gulp](https://github.com/wearefractal/gulp)
 
