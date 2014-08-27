@@ -1,5 +1,5 @@
 # gulp-groc
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]  [![Coverage Status][overalls-image]][overalls-url] [![Dependency Status][depstat-image]][depstat-url]
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]  [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency Status][depstat-image]][depstat-url]
 [![Livereload downloads][npm-download-image]][npm-download-url] [![MIT Licensed][license-image]](#license)
 
 > groc plugin for [gulp](https://github.com/wearefractal/gulp)
