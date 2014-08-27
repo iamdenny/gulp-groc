@@ -7,7 +7,7 @@ module.exports = function (param) {
 
 	// see "Writing a plugin"
 	// https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/README.md
-	function groc(file, enc, cb) {
+	function groc(file, enc, callback) {
 		/*jshint validthis:true*/
 
 		// Do nothing if no contents
@@ -30,7 +30,7 @@ module.exports = function (param) {
                     this.emit('error', new gutil.PluginError('gulp-<%= pluginName %>', err));
                 }
                 this.push(file);
-                cb();
+                callback();
             }.bind(this));
 
 		}
