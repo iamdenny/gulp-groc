@@ -1,6 +1,6 @@
 {
   "name": "gulp-groc",
-  "version": "0.4.1",
+  "version": "0.8.0",
   "description": "A simple gulp plug-in to generate a project's documentation using Groc ",
   "keywords": [
     "gulpplugin"
